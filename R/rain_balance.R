@@ -27,7 +27,7 @@ rain_balance <- function(precipitation,
   # calculate harvested rainwater
   supply = catchment_area * (100) *   # convert m2 to dm2
            precipitation  * (1/100) * # convert mm to dm
-           loss_factor
+           (1-loss_factor)
 
   # length
   data_length <- length(precipitation)
